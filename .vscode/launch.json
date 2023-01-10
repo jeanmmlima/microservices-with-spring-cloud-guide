@@ -1,14 +1,27 @@
 {
     "configurations": [
+
         {
             "type": "java",
-            "name": "Spring Boot-WorkerApplication<worker>",
+            "name": "worker8001",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.jeanlima.worker.WorkerApplication",
             "projectName": "worker",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": "-Dserver.port=8001"
+        },
+        {
+            "type": "java",
+            "name": "worker8002",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.jeanlima.worker.WorkerApplication",
+            "projectName": "worker",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": "-Dserver.port=8002"
         },
         {
             "type": "java",
@@ -19,6 +32,12 @@
             "projectName": "payroll",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Compound",
+            "configurations": ["worker8001","worker8002"]
         }
     ]
 }
