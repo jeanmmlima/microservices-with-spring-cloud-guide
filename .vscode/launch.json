@@ -1,6 +1,5 @@
 {
     "configurations": [
-
         {
             "type": "java",
             "name": "worker8001",
@@ -30,6 +29,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.jeanlima.payroll.PayrollApplication",
             "projectName": "payroll",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.jeanlima.eurekaserver.EurekaServerApplication",
+            "projectName": "eureka-server",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
